@@ -24,6 +24,10 @@ jobs:
           node-versions: 18.v
       - name: Install dependencies
         run: npm install
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+      - name: Build Angular App
+        run: ng build
       - name: Run tests with code coverage
         uses: coactions/setup-xvfb@v1
         with: 
